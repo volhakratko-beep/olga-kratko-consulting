@@ -142,3 +142,34 @@ a { color: inherit; }
   .hero__content { flex: 1 1 55%; }
   .hero__media { flex: 1 1 40%; }
 }
+
+.trust-bar { border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+.trust-bar__inner {
+  display: grid; grid-template-columns: 1fr; gap: var(--space-3);
+  text-align: center;
+}
+.trust-bar__item { display: flex; flex-direction: column; gap: 4px; }
+.trust-bar__item strong { font-size: 1.1rem; }
+.trust-bar__item span { color: #4A5060; font-size: 0.9rem; }
+
+@media (min-width: 768px) {
+  .trust-bar__inner { grid-template-columns: repeat(4, 1fr); }
+}
+
+.card-grid {
+  display: grid; grid-template-columns: 1fr; gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+@media (min-width: 768px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .card-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+}
+.problem__lead { max-width: 65ch; font-size: 1.05rem; margin-bottom: var(--space-3); }
