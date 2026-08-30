@@ -81,3 +81,64 @@ a { color: inherit; }
   border-color: var(--color-text);
   color: var(--color-text);
 }
+
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+.site-header__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: var(--space-2); padding-bottom: var(--space-2);
+}
+.site-header__logo { font-weight: 700; text-decoration: none; font-size: 1.1rem; }
+
+.nav-toggle {
+  display: flex; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: var(--space-1);
+}
+.nav-toggle__bar { width: 22px; height: 2px; background: var(--color-text); }
+
+.primary-nav {
+  display: none;
+  position: absolute; top: 100%; left: 0; right: 0;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  flex-direction: column;
+  padding: var(--space-2) var(--space-3) var(--space-3);
+}
+.primary-nav.is-open { display: flex; }
+.primary-nav a { padding: var(--space-1) 0; text-decoration: none; }
+.primary-nav__cta { margin-top: var(--space-1); text-align: center; }
+
+@media (min-width: 1024px) {
+  .nav-toggle { display: none; }
+  .primary-nav {
+    display: flex; flex-direction: row; align-items: center;
+    position: static; border: none; padding: 0; gap: var(--space-3);
+  }
+  .primary-nav__cta { margin-top: 0; }
+}
+
+.hero__inner {
+  display: flex; flex-direction: column-reverse; gap: var(--space-4);
+}
+.hero__eyebrow {
+  color: var(--color-accent); font-weight: 700; letter-spacing: 0.06em;
+  font-size: 0.85rem; margin-bottom: var(--space-2);
+}
+.hero__lead { font-size: 1.1rem; max-width: 60ch; }
+.hero__credentials {
+  list-style: none; padding: 0; margin: var(--space-2) 0; color: #4A5060;
+}
+.hero__credentials li { padding: 2px 0; }
+.hero__ctas { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-3); }
+.hero__media img { border-radius: var(--radius); width: 100%; max-width: 420px; margin: 0 auto; }
+
+@media (min-width: 1024px) {
+  .hero__inner {
+    flex-direction: row; align-items: center; justify-content: space-between;
+  }
+  .hero__content { flex: 1 1 55%; }
+  .hero__media { flex: 1 1 40%; }
+}
