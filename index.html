@@ -287,9 +287,27 @@
         </div>
       </div>
     </section>
+
+    <section class="contact-form section" id="contact">
+      <div class="container contact-form__box">
+        <h2>Book Your Free 30-Minute Consultation</h2>
+        <p>Tell me about your product, marketing or AI challenge, and I'll get back to you to schedule a time.</p>
+        <form class="contact-form__form" aria-label="Book a free consultation" action="https://formspree.io/f/xgaevbqy" method="POST">
+          <label class="sr-only" for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" placeholder="Name" required />
+          <label class="sr-only" for="cf-email">Email</label>
+          <input id="cf-email" name="email" type="email" placeholder="Email" required />
+          <label class="sr-only" for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" placeholder="Tell me about your challenge" rows="4" required></textarea>
+          <input type="hidden" name="_subject" value="New consultation request from the website" />
+          <button type="submit" class="btn btn--primary">Send Request</button>
+        </form>
+        <p class="contact-form__status" data-form-status role="status" aria-live="polite"></p>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer" id="contact">
+  <footer class="site-footer">
     <div class="container site-footer__inner">
       <div>
         <strong>Olga Kratko</strong>
@@ -302,7 +320,7 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="site-footer__contact">
-        <p>Email: [CONTENT NEEDED]</p>
+        <p>Email: <a href="mailto:kratskoolga@gmail.com">kratskoolga@gmail.com</a></p>
         <p>LinkedIn: [CONTENT NEEDED]</p>
         <p>Telegram: [CONTENT NEEDED]</p>
       </div>
